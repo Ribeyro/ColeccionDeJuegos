@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D1BA32562CAE1F97009C24AD /* JuegosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BA32542CAE191F009C24AD /* JuegosViewController.swift */; };
 		D1E190782CAE0DD5006605D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E190772CAE0DD5006605D8 /* AppDelegate.swift */; };
 		D1E1907A2CAE0DD5006605D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E190792CAE0DD5006605D8 /* SceneDelegate.swift */; };
 		D1E1907C2CAE0DD5006605D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E1907B2CAE0DD5006605D8 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D1BA32542CAE191F009C24AD /* JuegosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuegosViewController.swift; sourceTree = "<group>"; };
 		D1E190742CAE0DD5006605D8 /* QuispeColeccionDeJuegos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuispeColeccionDeJuegos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1E190772CAE0DD5006605D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1E190792CAE0DD5006605D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				D1E190792CAE0DD5006605D8 /* SceneDelegate.swift */,
 				D1E1907B2CAE0DD5006605D8 /* ViewController.swift */,
 				D1E1907D2CAE0DD5006605D8 /* Main.storyboard */,
+				D1BA32542CAE191F009C24AD /* JuegosViewController.swift */,
 				D1E190832CAE0DD6006605D8 /* Assets.xcassets */,
 				D1E190852CAE0DD6006605D8 /* LaunchScreen.storyboard */,
 				D1E190882CAE0DD6006605D8 /* Info.plist */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1BA32562CAE1F97009C24AD /* JuegosViewController.swift in Sources */,
 				D1E190822CAE0DD5006605D8 /* QuispeColeccionDeJuegos.xcdatamodeld in Sources */,
 				D1E1907C2CAE0DD5006605D8 /* ViewController.swift in Sources */,
 				D1E190782CAE0DD5006605D8 /* AppDelegate.swift in Sources */,
