@@ -31,11 +31,21 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fxJ-JV-Kef">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="1HF-wM-mod">
-                            <connections>
-                                <segue destination="K92-sW-aEk" kind="show" identifier="juegoSegue" id="ZFn-a6-4Oc"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem style="plain" id="0P1-cs-hUa">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Zjx-OS-lpq">
+                                    <rect key="frame" x="302" y="5" width="92" height="34.5"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem systemItem="add" id="1HF-wM-mod">
+                                <connections>
+                                    <segue destination="K92-sW-aEk" kind="show" identifier="juegoSegue" id="ZFn-a6-4Oc"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="rOs-v1-wdY" id="YID-b8-pcY"/>
@@ -77,30 +87,32 @@
                                     <action selector="agregarTapped:" destination="K92-sW-aEk" eventType="touchUpInside" id="s9L-0h-Zgq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGt-dj-ShU">
-                                <rect key="frame" x="169" y="389" width="76" height="31"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Eliminar" cornerStyle="capsule"/>
-                                <connections>
-                                    <action selector="eliminarTapped:" destination="K92-sW-aEk" eventType="touchUpInside" id="zJh-IQ-zJJ"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categorias" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEB-aJ-tCU">
+                                <rect key="frame" x="165.5" y="420" width="83" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xMc-9f-M97">
+                                <rect key="frame" x="47" y="460" width="320" height="216"/>
+                            </pickerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7xi-ZV-RlG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="r7R-VG-A6I" firstAttribute="centerX" secondItem="8P9-af-2cz" secondAttribute="centerX" id="3dX-wf-eqD"/>
                             <constraint firstItem="r7R-VG-A6I" firstAttribute="centerX" secondItem="8P9-af-2cz" secondAttribute="centerX" id="6cY-ps-Zut"/>
-                            <constraint firstItem="8P9-af-2cz" firstAttribute="centerX" secondItem="gGt-dj-ShU" secondAttribute="centerX" id="8hb-zj-iXJ"/>
-                            <constraint firstItem="gGt-dj-ShU" firstAttribute="top" secondItem="8P9-af-2cz" secondAttribute="bottom" constant="27" id="Cpo-37-osv"/>
                             <constraint firstItem="4u0-wM-hhG" firstAttribute="centerX" secondItem="r7R-VG-A6I" secondAttribute="centerX" id="Fba-4q-Bwy"/>
+                            <constraint firstItem="8P9-af-2cz" firstAttribute="centerX" secondItem="AEB-aJ-tCU" secondAttribute="centerX" id="Mzm-WJ-vaK"/>
+                            <constraint firstItem="xMc-9f-M97" firstAttribute="top" secondItem="AEB-aJ-tCU" secondAttribute="bottom" constant="19" id="Psp-jA-Tg4"/>
                             <constraint firstItem="8P9-af-2cz" firstAttribute="centerX" secondItem="8QG-FR-cjR" secondAttribute="centerX" id="TGi-Fm-Kxl"/>
                             <constraint firstItem="4u0-wM-hhG" firstAttribute="centerX" secondItem="8QG-FR-cjR" secondAttribute="centerX" id="diX-UW-SZJ"/>
+                            <constraint firstItem="AEB-aJ-tCU" firstAttribute="centerX" secondItem="xMc-9f-M97" secondAttribute="centerX" id="eDT-vj-oGY"/>
                             <constraint firstItem="8P9-af-2cz" firstAttribute="top" secondItem="r7R-VG-A6I" secondAttribute="bottom" constant="29" id="eK6-fZ-hbF"/>
                             <constraint firstItem="r7R-VG-A6I" firstAttribute="centerX" secondItem="8QG-FR-cjR" secondAttribute="centerX" id="gZl-pX-d3I"/>
+                            <constraint firstItem="xMc-9f-M97" firstAttribute="centerX" secondItem="8QG-FR-cjR" secondAttribute="centerX" id="ig1-nm-MEo"/>
                             <constraint firstItem="r7R-VG-A6I" firstAttribute="top" secondItem="4u0-wM-hhG" secondAttribute="bottom" constant="20" id="jpq-Wj-sAd"/>
+                            <constraint firstItem="AEB-aJ-tCU" firstAttribute="top" secondItem="8P9-af-2cz" secondAttribute="bottom" constant="58" id="kWm-ML-CWL"/>
                             <constraint firstItem="4u0-wM-hhG" firstAttribute="top" secondItem="7xi-ZV-RlG" secondAttribute="top" constant="10" id="qCM-9O-TeN"/>
                             <constraint firstItem="4u0-wM-hhG" firstAttribute="width" secondItem="r7R-VG-A6I" secondAttribute="width" id="yMf-MS-oCM"/>
                         </constraints>
@@ -121,7 +133,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="agregarActualizarBoton" destination="8P9-af-2cz" id="n89-yf-lKH"/>
-                        <outlet property="eliminarBoton" destination="gGt-dj-ShU" id="Wtg-CH-DKp"/>
+                        <outlet property="categoriaPickerView" destination="xMc-9f-M97" id="cWz-Ug-xKZ"/>
                         <outlet property="imageView" destination="4u0-wM-hhG" id="ZP5-TF-WY6"/>
                         <outlet property="tituloTextField" destination="r7R-VG-A6I" id="a42-Ot-O3v"/>
                     </connections>
@@ -155,9 +167,6 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
