@@ -33,7 +33,7 @@
                     <navigationItem key="navigationItem" id="fxJ-JV-Kef">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="1HF-wM-mod">
                             <connections>
-                                <segue destination="K92-sW-aEk" kind="show" id="ZFn-a6-4Oc"/>
+                                <segue destination="K92-sW-aEk" kind="show" identifier="juegoSegue" id="ZFn-a6-4Oc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -67,10 +67,24 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8P9-af-2cz">
                                 <rect key="frame" x="169" y="331" width="76" height="31"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <color key="tintColor" systemColor="tertiarySystemBackgroundColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Agregar"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Agregar">
+                                    <backgroundConfiguration key="background" cornerRadius="20"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="agregarTapped:" destination="K92-sW-aEk" eventType="touchUpInside" id="s9L-0h-Zgq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGt-dj-ShU">
+                                <rect key="frame" x="169" y="389" width="76" height="31"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Eliminar" cornerStyle="capsule"/>
+                                <connections>
+                                    <action selector="eliminarTapped:" destination="K92-sW-aEk" eventType="touchUpInside" id="zJh-IQ-zJJ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -79,6 +93,8 @@
                         <constraints>
                             <constraint firstItem="r7R-VG-A6I" firstAttribute="centerX" secondItem="8P9-af-2cz" secondAttribute="centerX" id="3dX-wf-eqD"/>
                             <constraint firstItem="r7R-VG-A6I" firstAttribute="centerX" secondItem="8P9-af-2cz" secondAttribute="centerX" id="6cY-ps-Zut"/>
+                            <constraint firstItem="8P9-af-2cz" firstAttribute="centerX" secondItem="gGt-dj-ShU" secondAttribute="centerX" id="8hb-zj-iXJ"/>
+                            <constraint firstItem="gGt-dj-ShU" firstAttribute="top" secondItem="8P9-af-2cz" secondAttribute="bottom" constant="27" id="Cpo-37-osv"/>
                             <constraint firstItem="4u0-wM-hhG" firstAttribute="centerX" secondItem="r7R-VG-A6I" secondAttribute="centerX" id="Fba-4q-Bwy"/>
                             <constraint firstItem="8P9-af-2cz" firstAttribute="centerX" secondItem="8QG-FR-cjR" secondAttribute="centerX" id="TGi-Fm-Kxl"/>
                             <constraint firstItem="4u0-wM-hhG" firstAttribute="centerX" secondItem="8QG-FR-cjR" secondAttribute="centerX" id="diX-UW-SZJ"/>
@@ -104,6 +120,8 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="agregarActualizarBoton" destination="8P9-af-2cz" id="n89-yf-lKH"/>
+                        <outlet property="eliminarBoton" destination="gGt-dj-ShU" id="Wtg-CH-DKp"/>
                         <outlet property="imageView" destination="4u0-wM-hhG" id="ZP5-TF-WY6"/>
                         <outlet property="tituloTextField" destination="r7R-VG-A6I" id="a42-Ot-O3v"/>
                     </connections>
@@ -133,6 +151,15 @@
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
